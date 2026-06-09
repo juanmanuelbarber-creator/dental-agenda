@@ -64,7 +64,7 @@ function _handle(e) {
     const params  = e.parameter || {}
     const method  = params.method || 'GET'
     const recurso = params.recurso || ''
-    const body    = e.postData?.contents ? JSON.parse(e.postData.contents) : {}
+    const body    = params.data ? JSON.parse(params.data) : {}
 
     switch (recurso) {
       case 'pacientes':
