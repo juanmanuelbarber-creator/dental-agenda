@@ -20,11 +20,11 @@ const API = {
   },
 
   async post(recurso, body = {}) {
-    return this._call(recurso, 'POST', { data: JSON.stringify(body) })
+    return this._call(recurso, 'POST', body)
   },
 
   async put(recurso, body = {}) {
-    return this._call(recurso, 'PUT', { data: JSON.stringify(body) })
+    return this._call(recurso, 'PUT', body)
   },
 
   async del(recurso, id) {

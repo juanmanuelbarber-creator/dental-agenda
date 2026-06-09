@@ -29,6 +29,7 @@ const Pacientes = {
       const params = {}
       if (q) params.q = q
       const data = await API.get('pacientes', params)
+      this._data = data
       const tb   = document.getElementById('pac-tbody')
       if (!tb) return
       if (!data.length) {
@@ -98,7 +99,7 @@ const Pacientes = {
 
   async modalEditar(id) {
     try {
-      const p    = data.find(x => x.id === id)
+      const p    = (this._data || []).find(x => x.id === id)
       if (!p) { UI.error('No encontrado'); return }
       UI.openModal(`
         <div class="modal-header"><h2>Editar: ${p.nombre}</h2><button class="modal-close" onclick="UI.closeModal()">✕</button></div>

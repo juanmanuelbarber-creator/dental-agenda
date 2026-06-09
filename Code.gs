@@ -64,7 +64,8 @@ function _handle(e) {
     const params  = e.parameter || {}
     const method  = params.method || 'GET'
     const recurso = params.recurso || ''
-    const body    = params.data ? JSON.parse(params.data) : {}
+    const reserved = new Set(['recurso', 'method'])
+    const body    = Object.fromEntries(Object.entries(params).filter(([k]) => !reserved.has(k)))
 
     switch (recurso) {
       case 'pacientes':
