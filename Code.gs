@@ -91,6 +91,8 @@ function _handle(e) {
         break
       case 'stats':
         return _ok(getStats(params))
+      case 'debug':
+        return _ok({ params, body })
     }
     return _error('Recurso no encontrado: ' + recurso)
   } catch(err) {
