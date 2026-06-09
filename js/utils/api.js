@@ -2,7 +2,7 @@
 //  API — wrapper para llamadas a Apps Script
 //  Configurar la URL después del deploy
 // =============================================
-const API_URL = 'TU_WEB_APP_URL_AQUI'  // ← reemplazar con tu URL
+const API_URL = 'https://script.google.com/macros/s/AKfycbwTbOmk9LJKrtJDr1Ml3kL2ylGC3cY8HopWQHb9ZAjqjL8k2gsrjn3B8nCmNMm30k8gFA/exec'  // ← reemplazar con tu URL
 
 const API = {
   // Apps Script bloquea POST desde dominios externos (CORS).

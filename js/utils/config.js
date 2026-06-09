@@ -3,7 +3,7 @@
 //  Editar estos datos antes de publicar
 // =============================================
 const CONFIG = {
-  nombre_dentista:    'Dr./Dra. [Tu nombre]',
-  nombre_consultorio: '[Nombre del consultorio]',
+  nombre_dentista:    'Dr./Dra. [Fonseca Romina]',
+  nombre_consultorio: '[Fonseca Odontología]',
   telefono:           '+54 9 ...',
 }
