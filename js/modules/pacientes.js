@@ -26,6 +26,7 @@ const Pacientes = {
 
   async load(q = '') {
     try {
+      const params = {}
       if (q) params.q = q
       const data = await API.get('pacientes', params)
       const tb   = document.getElementById('pac-tbody')
